@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Potta+One&display=swap');
+
+:root {
+    --white: #e6ece6;
+    --light-green: #a0ac32;
+    --dark-green: rgb(25, 72, 32);
+    --black: rgb(20, 29, 22);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Potta One', cursive;
+    min-height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+    padding-top: 20px;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:  rgba(20,29,22, 0.3)
+}
+
+.loader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+/* Image Container */
+.image-container {
+    margin: 10px 30%;
+    border: none;
+}
+
+.image-container img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Media Query for large smartphones */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+        padding-top: 10px;
+    }
+
+    .image-container {
+        margin: 10px;
+    }
+}
