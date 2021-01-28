@@ -1,4 +1,4 @@
-# Explanation of the Project
+# Infinite Scroller :curly_loop:
 
 This app fetches images from the Unsplash API and monitors when the images are loaded in order to dynamically hide the display animation. This way, the images seem to go on indefinitely.
 
