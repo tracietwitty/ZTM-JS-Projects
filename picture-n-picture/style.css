@@ -11,5 +11,37 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(21, 64, 71);
+    background-color: rgb(204, 204, 204);
+}
+
+button {
+    font-family: inherit;
+    border: transparent;
+    outline: none;
+    color: rgb(204, 204, 204);
+    text-shadow: 0 2px 5px black;
+    cursor: pointer;
+    width: 120px;
+    height: 55px;
+    font-size: 35px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, rgb(27, 77, 85), rgb(21, 65, 71));
+    box-shadow: outset 0 16px 15px -10px rgb(32, 94, 109, 0.6), 0 12px 12px 0 rgba(0,0,0,0.3);
+}
+
+.button-container {
+    border: transparent;
+    padding: 2px;
+    border-radius: 50%;
+    box-shadow: outset 0 16px 15px -10px rgb(32, 94, 109, 0.6);
+    margin-top: 5px;
+}
+
+button:hover {
+    background: linear-gradient(to top, rgb(26, 77, 85), rgb(21, 65, 71));
+}
+
+button:active {
+    transform: translateY(.5px);
+    box-shadow:  0 6px 6px 0 rgba(0,0,0,.2);
 }
