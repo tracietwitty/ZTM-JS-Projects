@@ -6,16 +6,21 @@ const image2 = document.getElementById('image2')
 const image3 = document.getElementById('image3')
 const textBox = document.getElementById('text-box')
 
+
+// Sorts light and dark images depending on what mode is selected:
+function imageMode(color) {
+    image1.src = `./img/undraw_proud_coder_${color}.svg`
+    image2.src = `./img/undraw_feeling_proud_${color}.svg`
+    image3.src = `./img/undraw_conceptual_idea_${color}.svg`
+}
+
 //  Defines detailed dark mode styling:
 function darkMode() {
     nav.style.backgroundColor = 'rgb(0 0 0 /50%)'
     textBox.style.backgroundColor = 'rgb(255 255 255 / 50%)'
     toggle.children[0].textContent = 'Dark Mode'
-    toggle.children[1].classList.remove('fa-sun')
-    toggle.children[1].classList.add('fa-moon')
-    image1.src = './img/undraw_proud_coder_dark.svg'
-    image2.src = './img/undraw_feeling_proud_dark.svg'
-    image3.src = './img/undraw_conceptual_idea_dark.svg'
+    toggle.children[1].classList.replace('fa-sun', 'fa-moon')
+    imageMode('dark')
 }
 
 //  Defines detailed light mode styling:
@@ -23,11 +28,8 @@ function lightMode() {
     nav.style.backgroundColor =  'rgb(255 255 255 / 50%)'
     textBox.style.backgroundColor = 'rgb(0 0 0 /50%)'
     toggle.children[0].textContent = 'Light Mode'
-    toggle.children[1].classList.remove('fa-moon')
-    toggle.children[1].classList.add('fa-sun')
-    image1.src = './img/undraw_proud_coder_light.svg'
-    image2.src = './img/undraw_feeling_proud_light.svg'
-    image3.src = './img/undraw_conceptual_idea_light.svg'
+    toggle.children[1].classList.replace('fa-moon', 'fa-sun')
+    imageMode('light')
 }
 
 // Switches theme dynamically:
