@@ -1,10 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
 :root {
   --primaryColor: #e0e0e0;
   --navColor1: #21292c;
-  --navColor2: #0f340f;  
+  --navColor2: #0f340f;
   --navColor3: #1a971a;
   --navColor4: #eb1d92;
   --navColor5: #e95ead;
@@ -25,20 +24,31 @@ body {
 /* --  Overlay --*/
 .overlay {
   position: fixed;
-  z-index: 9;
+  z-index: 10000;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0, 0.35);
+  background-color: rgba(0, 0, 0, 0.35);
+  transform: translateX(-100vw);
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-100vw);
 }
 
 /* --  Nav Menu Items --*/
 nav,
 nav ul {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul {
@@ -72,10 +82,10 @@ nav li a:hover {
 }
 
 nav li a::before {
-  content: "";
+  content: '';
   width: 25vw;
   height: 3px;
-  background-color:  #e0e0e0;
+  background-color: #e0e0e0;
   position: absolute;
   top: 47.5%;
   left: 0;
@@ -105,7 +115,6 @@ nav li:nth-of-type(4) {
 nav li:nth-of-type(5) {
   background-color: var(--navColor5);
 }
-
 
 /* --- Menu Bars ------------------------------------ */
 
